@@ -30,8 +30,14 @@ $(document).ready(() => {
       data: `competencia=${competencia}`, //x-www-form-urlencoded
       dataType: "json", //tipo de retorno do servidor
       success: (dados) => {
-        $('#numeroVendas').html(dados.numeroVendas);
-        $('#totalVendas').html(dados.totalVendas);
+        $("#numeroVendas").html(dados.numeroVendas);
+        $("#totalVendas").html(dados.totalVendas);
+        $("#clientesAtivos").html(dados.clientesAtivos);
+        $("#clientesInativos").html(dados.clientesInativos);
+        $("#totalReclamacoes").html(dados.totalReclamacoes);
+        $("#totalElogios").html(dados.totalElogios);
+        $("#totalSugestoes").html(dados.totalSugestoes);
+        $("#totalDespesas").html(dados.totalDespesas);
       },
       error: (erro) => {
         console.log(erro);
